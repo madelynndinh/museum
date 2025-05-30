@@ -10,10 +10,19 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
 
+        :root {
+            --color-dark-brown: #3b2d24;
+            --color-warm-brown: #926e3d;
+            --color-burnt-orange: #c17817;
+            --color-saddle-brown: #8b4513;
+            --color-light-tan: #d4a76a;
+            --color-cream: #f9f6ee;
+        }
+
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: #f8f7f4;
-            color: #333;
+            background-color: var(--color-cream);
+            color: var(--color-dark-brown);
         }
 
         h1,
@@ -22,6 +31,7 @@
         h4,
         h5 {
             font-family: 'Playfair Display', serif;
+            color: var(--color-dark-brown);
         }
 
         .hero-slider {
@@ -47,30 +57,33 @@
         }
 
         .hero-content {
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(59, 45, 36, 0.8);
             backdrop-filter: blur(5px);
         }
 
         .value-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .value-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(59, 45, 36, 0.1);
         }
 
         .filter-btn.active {
-            background-color: #4a5568;
-            color: white;
+            background-color: var(--color-warm-brown);
+            color: var(--color-cream);
         }
 
         .artifact-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .artifact-card:hover {
             transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(59, 45, 36, 0.1);
         }
 
         .artifact-tag {
@@ -81,28 +94,32 @@
         .nav-tab {
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
+            color: var(--color-dark-brown);
         }
 
         .nav-tab.active {
-            border-bottom: 2px solid #805ad5;
-            color: #805ad5;
+            border-bottom: 2px solid var(--color-warm-brown);
+            color: var(--color-warm-brown);
         }
 
         .nav-tab:hover:not(.active) {
-            border-bottom: 2px solid #cbd5e0;
+            border-bottom: 2px solid var(--color-light-tan);
+            color: var(--color-burnt-orange);
         }
 
         .subject-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .subject-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(59, 45, 36, 0.1);
         }
 
         .lesson-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .lesson-card:hover {
@@ -112,6 +129,7 @@
         .exhibit-item {
             cursor: grab;
             transition: all 0.2s ease;
+            background-color: var(--color-cream);
         }
 
         .exhibit-item:active {
@@ -120,6 +138,7 @@
 
         .exhibit-item:hover {
             transform: scale(1.05);
+            border-color: var(--color-warm-brown);
         }
 
         .exhibit-dropzone {
@@ -128,12 +147,13 @@
         }
 
         .exhibit-dropzone.highlight {
-            background-color: rgba(128, 90, 213, 0.1);
-            border: 2px dashed #805ad5;
+            background-color: rgba(146, 110, 61, 0.1);
+            border: 2px dashed var(--color-warm-brown);
         }
 
         .community-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .community-card:hover {
@@ -142,6 +162,7 @@
 
         .research-tool-card {
             transition: all 0.3s ease;
+            background-color: var(--color-cream);
         }
 
         .research-tool-card:hover {
@@ -154,23 +175,73 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: #f1f1f1;
+            background: var(--color-cream);
         }
 
         ::-webkit-scrollbar-thumb {
-            background: #888;
+            background: var(--color-warm-brown);
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+            background: var(--color-dark-brown);
+        }
+
+        /* Button styles */
+        .btn-primary {
+            background-color: var(--color-warm-brown);
+            color: var(--color-cream);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-dark-brown);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-cream);
+            color: var(--color-dark-brown);
+            border: 2px solid var(--color-warm-brown);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--color-warm-brown);
+            color: var(--color-cream);
+        }
+
+        /* Section backgrounds */
+        .bg-primary {
+            background-color: var(--color-dark-brown);
+            color: var(--color-cream);
+        }
+
+        .bg-secondary {
+            background-color: var(--color-warm-brown);
+            color: var(--color-cream);
+        }
+
+        .bg-light {
+            background-color: var(--color-cream);
+            color: var(--color-dark-brown);
+        }
+
+        /* Text colors */
+        .text-primary {
+            color: var(--color-dark-brown);
+        }
+
+        .text-secondary {
+            color: var(--color-warm-brown);
+        }
+
+        .text-accent {
+            color: var(--color-burnt-orange);
         }
 
         /* 3D Model Viewer */
         .model-viewer-container {
             position: relative;
             height: 400px;
-            background: #f0f0f0;
+            background: var(--color-cream);
             border-radius: 8px;
             overflow: hidden;
         }
@@ -195,14 +266,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: white;
-            border: 1px solid #ddd;
+            background: var(--color-cream);
+            border: 1px solid var(--color-light-tan);
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .model-control-btn:hover {
-            background: #f0f0f0;
+            background: var(--color-light-tan);
             transform: scale(1.1);
         }
 
@@ -210,8 +281,8 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: rgba(128, 90, 213, 0.8);
-            border: 2px solid white;
+            background: rgba(146, 110, 61, 0.8);
+            border: 2px solid var(--color-cream);
             border-radius: 50%;
             transform: translate(-50%, -50%);
             cursor: pointer;
@@ -225,7 +296,7 @@
 
         .annotation-tooltip {
             position: absolute;
-            background: white;
+            background: var(--color-cream);
             border-radius: 8px;
             padding: 10px;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -245,20 +316,19 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="bg-white shadow-md">
+    <nav class="bg-light shadow-md">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <svg class="h-10 w-10 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="h-8 w-8 md:h-10 md:w-10 text-secondary" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z" />
                     </svg>
-                    <span class="ml-3 text-xl font-semibold">Digital Museum </span>
+                    <span class="ml-2 md:ml-3 text-lg md:text-xl font-semibold text-primary">Digital Museum</span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#" class="nav-tab active py-2 font-medium" onclick="showSection('home-page')">Home</a>
-                    <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('impact-dashboard')">Impact </a>
-
+                    <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('impact-dashboard')">Impact</a>
                     <a href="#" class="nav-tab py-2 font-medium"
                         onclick="showSection('collection-explorer')">Collection</a>
                     <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('education-portal')">Education</a>
@@ -269,11 +339,11 @@
                     <a href="#" class="nav-tab py-2 font-medium"
                         onclick="showSection('research-interface')">Research</a>
                 </div>
-                <div class="flex items-center">
-                    <button class="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-md">
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block btn-primary px-4 py-2 rounded-md">
                         Support Digitization
                     </button>
-                    <button class="md:hidden ml-4">
+                    <button class="md:hidden text-primary" onclick="toggleMobileMenu()">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -291,10 +361,10 @@
             <!-- Hero Section -->
             <div class="hero-slider relative">
                 <div class="slide active"
-                    style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%23805ad5&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;300&quot; fill=&quot;%23b794f4&quot;/><rect x=&quot;300&quot; y=&quot;200&quot; width=&quot;600&quot; height=&quot;400&quot; fill=&quot;%236b46c1&quot;/></svg>');">
+                    style="background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/72000/72969-World-Museum-Liverpool.jpg')">
                 </div>
                 <div class="slide"
-                    style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%234a5568&quot;/><polygon points=&quot;600,100 900,400 600,700 300,400&quot; fill=&quot;%23a0aec0&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;150&quot; fill=&quot;%232d3748&quot;/></svg>');">
+                    style="background-image: url('https://images.liverpoolmuseums.org.uk/2020-01/World%20Museum%20Banner%20Video%20Compressed%20%281%29_0.mp4')">
                 </div>
                 <div class="slide"
                     style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%23ed8936&quot;/><rect x=&quot;200&quot; y=&quot;200&quot; width=&quot;800&quot; height=&quot;400&quot; fill=&quot;%23dd6b20&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;200&quot; fill=&quot;%23f6ad55&quot;/></svg>');">
@@ -302,7 +372,7 @@
 
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="hero-content text-white p-8 rounded-lg max-w-3xl text-center">
-                        <h1 class="text-5xl font-bold mb-4">Preserving the Past, Powering the Future</h1>
+                        <h1 class="text-5xl font-bold mb-4 text-white">Preserving the Past, Powering the Future</h1>
                         <p class="text-xl mb-8">Explore our digitized collection of cultural treasures from around the
                             world</p>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -327,58 +397,64 @@
             </div>
 
             <!-- Value Panels -->
-            <div class="container mx-auto px-4 py-16">
-                <h2 class="text-3xl font-bold text-center mb-12">The Value of Digital Preservation</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-globe text-blue-600 text-2xl"></i>
+            <div class="container mx-auto px-4 py-8 md:py-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">The Value of Digital
+                    Preservation</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+                    <div class="value-card p-6 rounded-lg shadow-md text-center">
+                        <div
+                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-secondary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Global Access</h3>
-                        <p class="text-gray-600">Enabling researchers worldwide to study our collection</p>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Global Access</h3>
+                        <p class="text-secondary">Enabling researchers worldwide to study our collection</p>
                     </div>
 
-                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-coins text-green-600 text-2xl"></i>
+                    <div class="value-card p-6 rounded-lg shadow-md text-center">
+                        <div
+                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-coins text-secondary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Revenue Opportunities</h3>
-                        <p class="text-gray-600">Creating sustainable funding through digital assets</p>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Revenue Opportunities</h3>
+                        <p class="text-secondary">Creating sustainable funding through digital assets</p>
                     </div>
 
-                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-graduation-cap text-yellow-600 text-2xl"></i>
+                    <div class="value-card p-6 rounded-lg shadow-md text-center">
+                        <div
+                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-secondary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Educational Tools</h3>
-                        <p class="text-gray-600">Interactive learning experiences for all ages</p>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Educational Tools</h3>
+                        <p class="text-secondary">Interactive learning experiences for all ages</p>
                     </div>
 
-                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    <div class="value-card p-6 rounded-lg shadow-md text-center">
+                        <div
+                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-secondary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Conservation Benefits</h3>
-                        <p class="text-gray-600">Preserving fragile artifacts for future generations</p>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Conservation Benefits</h3>
+                        <p class="text-secondary">Preserving fragile artifacts for future generations</p>
                     </div>
 
-                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-hands-helping text-purple-600 text-2xl"></i>
+                    <div class="value-card p-6 rounded-lg shadow-md text-center">
+                        <div
+                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-hands-helping text-secondary text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Cultural Reconnection</h3>
-                        <p class="text-gray-600">Reuniting communities with their heritage</p>
+                        <h3 class="text-xl font-semibold mb-2 text-primary">Cultural Reconnection</h3>
+                        <p class="text-secondary">Reuniting communities with their heritage</p>
                     </div>
                 </div>
             </div>
 
             <!-- Featured Items -->
-            <div class="bg-gray-100 py-16">
+            <div class="bg-light py-8 md:py-16">
                 <div class="container mx-auto px-4">
-                    <div class="flex justify-between items-center mb-8">
-                        <h2 class="text-3xl font-bold">Featured Digital Artifacts</h2>
-                        <button class="text-purple-700 font-semibold flex items-center"
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-0 text-primary">Featured Digital Artifacts
+                        </h2>
+                        <button class="text-secondary font-semibold flex items-center hover:text-accent"
                             onclick="showSection('collection-explorer')">
                             View All Collection
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -467,211 +543,211 @@
             </div>
 
             <!-- Stats Section -->
-            <div class="container mx-auto px-4 py-16">
-                <h2 class="text-3xl font-bold text-center mb-12">Digitization Impact</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-purple-700 mb-2">65%</div>
-                        <p class="text-gray-600">Collection Digitized</p>
+            <div class="container mx-auto px-4 py-8 md:py-16">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">Digitization Impact
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">65%</div>
+                        <p class="text-primary">Collection Digitized</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-purple-700 mb-2">127</div>
-                        <p class="text-gray-600">Countries Accessing</p>
+                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">127</div>
+                        <p class="text-primary">Countries Accessing</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-purple-700 mb-2">45K+</div>
-                        <p class="text-gray-600">Educational Downloads</p>
+                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">45K+</div>
+                        <p class="text-primary">Educational Downloads</p>
                     </div>
 
-                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-purple-700 mb-2">$1.2M</div>
-                        <p class="text-gray-600">Revenue Generated</p>
+                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-secondary mb-2">$1.2M</div>
+                        <p class="text-primary">Revenue Generated</p>
                     </div>
                 </div>
             </div>
- 
+
 
         </section>
-                   <!-- Impact Dashboard Section -->
-<section id="impact-dashboard" class="hidden">
-    <div class="bg-indigo-600 text-white py-12">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold mb-4">Impact Dashboard</h1>
-            <p class="text-xl opacity-90">Track the value and reach of our digital collection</p>
-        </div>
-    </div>
-
-    <!-- Top KPIs -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold text-gray-700">Collection Digitized</h3>
-                    <span class="text-indigo-600">
-                        <i class="fas fa-database text-2xl"></i>
-                    </span>
-                </div>
-                <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="collectionDigitized">65%</div>
-                <div class="text-sm text-gray-500">+5% from last month</div>
-                <div class="mt-4 h-2 bg-gray-200 rounded-full">
-                    <div class="h-2 bg-indigo-600 rounded-full" style="width: 65%"></div>
+        <!-- Impact Dashboard Section -->
+        <section id="impact-dashboard" class="hidden">
+            <div class="bg-indigo-600 text-white py-12">
+                <div class="container mx-auto px-4">
+                    <h1 class="text-4xl font-bold mb-4">Impact Dashboard</h1>
+                    <p class="text-xl opacity-90">Track the value and reach of our digital collection</p>
                 </div>
             </div>
 
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold text-gray-700">Global Research Access</h3>
-                    <span class="text-green-600">
-                        <i class="fas fa-globe text-2xl"></i>
-                    </span>
-                </div>
-                <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="globalAccess">127</div>
-                <div class="text-sm text-gray-500">Countries accessing our collection</div>
-                <div class="mt-4 flex items-center text-sm text-green-600">
-                    <i class="fas fa-arrow-up mr-1"></i>
-                    <span>12% increase in international research</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold text-gray-700">Educational Downloads</h3>
-                    <span class="text-blue-600">
-                        <i class="fas fa-graduation-cap text-2xl"></i>
-                    </span>
-                </div>
-                <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="educationalDownloads">45K+</div>
-                <div class="text-sm text-gray-500">Learning resources accessed</div>
-                <div class="mt-4 flex items-center text-sm text-blue-600">
-                    <i class="fas fa-chart-line mr-1"></i>
-                    <span>Popular in 230+ institutions</span>
-                </div>
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <div class="flex items-center justify-between mb-4">
-                    <h3 class="text-lg font-semibold text-gray-700">Revenue Generated</h3>
-                    <span class="text-yellow-600">
-                        <i class="fas fa-coins text-2xl"></i>
-                    </span>
-                </div>
-                <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="revenueGenerated">$1.2M</div>
-                <div class="text-sm text-gray-500">From digital assets</div>
-                <div class="mt-4 flex items-center text-sm text-yellow-600">
-                    <i class="fas fa-chart-pie mr-1"></i>
-                    <span>Diversified revenue streams</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Detailed Analytics -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <!-- Global Access Heatmap -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-6">Global Access Distribution</h3>
-                <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg">
-                    <!-- Placeholder for actual heatmap -->
-                    <div class="p-4 flex items-center justify-center">
-                        <p class="text-gray-500">Interactive global heatmap visualization</p>
+            <!-- Top KPIs -->
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">Collection Digitized</h3>
+                            <span class="text-indigo-600">
+                                <i class="fas fa-database text-2xl"></i>
+                            </span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="collectionDigitized">65%</div>
+                        <div class="text-sm text-gray-500">+5% from last month</div>
+                        <div class="mt-4 h-2 bg-gray-200 rounded-full">
+                            <div class="h-2 bg-indigo-600 rounded-full" style="width: 65%"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-4 grid grid-cols-3 gap-4">
-                    <div class="text-center">
-                        <div class="text-lg font-semibold">Europe</div>
-                        <div class="text-sm text-gray-500">42%</div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">Global Research Access</h3>
+                            <span class="text-green-600">
+                                <i class="fas fa-globe text-2xl"></i>
+                            </span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="globalAccess">127</div>
+                        <div class="text-sm text-gray-500">Countries accessing our collection</div>
+                        <div class="mt-4 flex items-center text-sm text-green-600">
+                            <i class="fas fa-arrow-up mr-1"></i>
+                            <span>12% increase in international research</span>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-lg font-semibold">Americas</div>
-                        <div class="text-sm text-gray-500">28%</div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">Educational Downloads</h3>
+                            <span class="text-blue-600">
+                                <i class="fas fa-graduation-cap text-2xl"></i>
+                            </span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="educationalDownloads">45K+</div>
+                        <div class="text-sm text-gray-500">Learning resources accessed</div>
+                        <div class="mt-4 flex items-center text-sm text-blue-600">
+                            <i class="fas fa-chart-line mr-1"></i>
+                            <span>Popular in 230+ institutions</span>
+                        </div>
                     </div>
-                    <div class="text-center">
-                        <div class="text-lg font-semibold">Asia-Pacific</div>
-                        <div class="text-sm text-gray-500">30%</div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-gray-700">Revenue Generated</h3>
+                            <span class="text-yellow-600">
+                                <i class="fas fa-coins text-2xl"></i>
+                            </span>
+                        </div>
+                        <div class="text-3xl font-bold text-gray-900 mb-2" data-stat="revenueGenerated">$1.2M</div>
+                        <div class="text-sm text-gray-500">From digital assets</div>
+                        <div class="mt-4 flex items-center text-sm text-yellow-600">
+                            <i class="fas fa-chart-pie mr-1"></i>
+                            <span>Diversified revenue streams</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Revenue Sources -->
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-6">Revenue Sources</h3>
-                <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg">
-                    <!-- Placeholder for actual pie chart -->
-                    <div class="p-4 flex items-center justify-center">
-                        <p class="text-gray-500">Interactive revenue breakdown chart</p>
+            <!-- Detailed Analytics -->
+            <div class="container mx-auto px-4 py-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Global Access Heatmap -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6">Global Access Distribution</h3>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg">
+                            <!-- Placeholder for actual heatmap -->
+                            <div class="p-4 flex items-center justify-center">
+                                <p class="text-gray-500">Interactive global heatmap visualization</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 grid grid-cols-3 gap-4">
+                            <div class="text-center">
+                                <div class="text-lg font-semibold">Europe</div>
+                                <div class="text-sm text-gray-500">42%</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-semibold">Americas</div>
+                                <div class="text-sm text-gray-500">28%</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-lg font-semibold">Asia-Pacific</div>
+                                <div class="text-sm text-gray-500">30%</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="mt-4 grid grid-cols-2 gap-4">
-                    <div class="flex items-center">
-                        <span class="w-3 h-3 bg-indigo-500 rounded-full mr-2"></span>
-                        <span class="text-sm">Licensing (45%)</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                        <span class="text-sm">Virtual Tours (25%)</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
-                        <span class="text-sm">Educational (20%)</span>
-                    </div>
-                    <div class="flex items-center">
-                        <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
-                        <span class="text-sm">AR/VR Apps (10%)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Digitization Progress -->
-    <div class="container mx-auto px-4 py-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold mb-6">5-Year Digitization Target</h3>
-            <div class="relative pt-1">
-                <div class="flex mb-2 items-center justify-between">
-                    <div>
-                        <span
-                            class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">
-                            Progress
-                        </span>
-                    </div>
-                    <div class="text-right">
-                        <span class="text-xs font-semibold inline-block text-indigo-600">
-                            65%
-                        </span>
-                    </div>
-                </div>
-                <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-indigo-200">
-                    <div style="width:65%"
-                        class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-500">
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">12,450</div>
-                        <div class="text-sm text-gray-500">Items Digitized</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">6,720</div>
-                        <div class="text-sm text-gray-500">In Progress</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">3,890</div>
-                        <div class="text-sm text-gray-500">Queued</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-900">890</div>
-                        <div class="text-sm text-gray-500">Priority Items</div>
+                    <!-- Revenue Sources -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold mb-6">Revenue Sources</h3>
+                        <div class="aspect-w-16 aspect-h-9 bg-gray-100 rounded-lg">
+                            <!-- Placeholder for actual pie chart -->
+                            <div class="p-4 flex items-center justify-center">
+                                <p class="text-gray-500">Interactive revenue breakdown chart</p>
+                            </div>
+                        </div>
+                        <div class="mt-4 grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-indigo-500 rounded-full mr-2"></span>
+                                <span class="text-sm">Licensing (45%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+                                <span class="text-sm">Virtual Tours (25%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+                                <span class="text-sm">Educational (20%)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                                <span class="text-sm">AR/VR Apps (10%)</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+
+            <!-- Digitization Progress -->
+            <div class="container mx-auto px-4 py-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-6">5-Year Digitization Target</h3>
+                    <div class="relative pt-1">
+                        <div class="flex mb-2 items-center justify-between">
+                            <div>
+                                <span
+                                    class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-indigo-600 bg-indigo-200">
+                                    Progress
+                                </span>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-xs font-semibold inline-block text-indigo-600">
+                                    65%
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-indigo-200">
+                            <div style="width:65%"
+                                class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-indigo-500">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">12,450</div>
+                                <div class="text-sm text-gray-500">Items Digitized</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">6,720</div>
+                                <div class="text-sm text-gray-500">In Progress</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">3,890</div>
+                                <div class="text-sm text-gray-500">Queued</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="text-2xl font-bold text-gray-900">890</div>
+                                <div class="text-sm text-gray-500">Priority Items</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Collection Explorer Section -->
         <section id="collection-explorer" class="hidden">
