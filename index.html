@@ -10,19 +10,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
 
-        :root {
-            --color-dark-brown: #3b2d24;
-            --color-warm-brown: #926e3d;
-            --color-burnt-orange: #c17817;
-            --color-saddle-brown: #8b4513;
-            --color-light-tan: #d4a76a;
-            --color-cream: #f9f6ee;
-        }
-
         body {
             font-family: 'Raleway', sans-serif;
-            background-color: var(--color-cream);
-            color: var(--color-dark-brown);
+            background-color: #f8f7f4;
+            color: #333;
         }
 
         h1,
@@ -31,7 +22,6 @@
         h4,
         h5 {
             font-family: 'Playfair Display', serif;
-            color: var(--color-dark-brown);
         }
 
         .hero-slider {
@@ -57,33 +47,30 @@
         }
 
         .hero-content {
-            background: rgba(59, 45, 36, 0.8);
+            background: rgba(0, 0, 0, 0.5);
             backdrop-filter: blur(5px);
         }
 
         .value-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .value-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(59, 45, 36, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .filter-btn.active {
-            background-color: var(--color-warm-brown);
-            color: var(--color-cream);
+            background-color: #4a5568;
+            color: white;
         }
 
         .artifact-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .artifact-card:hover {
             transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(59, 45, 36, 0.1);
         }
 
         .artifact-tag {
@@ -94,32 +81,28 @@
         .nav-tab {
             transition: all 0.3s ease;
             border-bottom: 2px solid transparent;
-            color: var(--color-dark-brown);
         }
 
         .nav-tab.active {
-            border-bottom: 2px solid var(--color-warm-brown);
-            color: var(--color-warm-brown);
+            border-bottom: 2px solid #805ad5;
+            color: #805ad5;
         }
 
         .nav-tab:hover:not(.active) {
-            border-bottom: 2px solid var(--color-light-tan);
-            color: var(--color-burnt-orange);
+            border-bottom: 2px solid #cbd5e0;
         }
 
         .subject-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .subject-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(59, 45, 36, 0.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
 
         .lesson-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .lesson-card:hover {
@@ -129,7 +112,6 @@
         .exhibit-item {
             cursor: grab;
             transition: all 0.2s ease;
-            background-color: var(--color-cream);
         }
 
         .exhibit-item:active {
@@ -138,7 +120,6 @@
 
         .exhibit-item:hover {
             transform: scale(1.05);
-            border-color: var(--color-warm-brown);
         }
 
         .exhibit-dropzone {
@@ -147,13 +128,12 @@
         }
 
         .exhibit-dropzone.highlight {
-            background-color: rgba(146, 110, 61, 0.1);
-            border: 2px dashed var(--color-warm-brown);
+            background-color: rgba(128, 90, 213, 0.1);
+            border: 2px dashed #805ad5;
         }
 
         .community-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .community-card:hover {
@@ -162,7 +142,6 @@
 
         .research-tool-card {
             transition: all 0.3s ease;
-            background-color: var(--color-cream);
         }
 
         .research-tool-card:hover {
@@ -175,73 +154,23 @@
         }
 
         ::-webkit-scrollbar-track {
-            background: var(--color-cream);
+            background: #f1f1f1;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: var(--color-warm-brown);
+            background: #888;
             border-radius: 4px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: var(--color-dark-brown);
-        }
-
-        /* Button styles */
-        .btn-primary {
-            background-color: var(--color-warm-brown);
-            color: var(--color-cream);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--color-dark-brown);
-        }
-
-        .btn-secondary {
-            background-color: var(--color-cream);
-            color: var(--color-dark-brown);
-            border: 2px solid var(--color-warm-brown);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--color-warm-brown);
-            color: var(--color-cream);
-        }
-
-        /* Section backgrounds */
-        .bg-primary {
-            background-color: var(--color-dark-brown);
-            color: var(--color-cream);
-        }
-
-        .bg-secondary {
-            background-color: var(--color-warm-brown);
-            color: var(--color-cream);
-        }
-
-        .bg-light {
-            background-color: var(--color-cream);
-            color: var(--color-dark-brown);
-        }
-
-        /* Text colors */
-        .text-primary {
-            color: var(--color-dark-brown);
-        }
-
-        .text-secondary {
-            color: var(--color-warm-brown);
-        }
-
-        .text-accent {
-            color: var(--color-burnt-orange);
+            background: #555;
         }
 
         /* 3D Model Viewer */
         .model-viewer-container {
             position: relative;
             height: 400px;
-            background: var(--color-cream);
+            background: #f0f0f0;
             border-radius: 8px;
             overflow: hidden;
         }
@@ -266,14 +195,14 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: var(--color-cream);
-            border: 1px solid var(--color-light-tan);
+            background: white;
+            border: 1px solid #ddd;
             cursor: pointer;
             transition: all 0.2s;
         }
 
         .model-control-btn:hover {
-            background: var(--color-light-tan);
+            background: #f0f0f0;
             transform: scale(1.1);
         }
 
@@ -281,8 +210,8 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: rgba(146, 110, 61, 0.8);
-            border: 2px solid var(--color-cream);
+            background: rgba(128, 90, 213, 0.8);
+            border: 2px solid white;
             border-radius: 50%;
             transform: translate(-50%, -50%);
             cursor: pointer;
@@ -296,7 +225,7 @@
 
         .annotation-tooltip {
             position: absolute;
-            background: var(--color-cream);
+            background: white;
             border-radius: 8px;
             padding: 10px;
             box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
@@ -316,19 +245,20 @@
 
 <body>
     <!-- Navigation -->
-    <nav class="bg-light shadow-md">
+    <nav class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-3">
             <div class="flex justify-between items-center">
                 <div class="flex items-center">
-                    <svg class="h-8 w-8 md:h-10 md:w-10 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                    <svg class="h-10 w-10 text-purple-700" fill="currentColor" viewBox="0 0 24 24">
                         <path
                             d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-5-9h10v2H7z" />
                     </svg>
-                    <span class="ml-2 md:ml-3 text-lg md:text-xl font-semibold text-primary">Digital Museum</span>
+                    <span class="ml-3 text-xl font-semibold">Digital Museum </span>
                 </div>
                 <div class="hidden md:flex space-x-8">
                     <a href="#" class="nav-tab active py-2 font-medium" onclick="showSection('home-page')">Home</a>
-                    <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('impact-dashboard')">Impact</a>
+                    <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('impact-dashboard')">Impact </a>
+
                     <a href="#" class="nav-tab py-2 font-medium"
                         onclick="showSection('collection-explorer')">Collection</a>
                     <a href="#" class="nav-tab py-2 font-medium" onclick="showSection('education-portal')">Education</a>
@@ -339,11 +269,11 @@
                     <a href="#" class="nav-tab py-2 font-medium"
                         onclick="showSection('research-interface')">Research</a>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button class="hidden md:block btn-primary px-4 py-2 rounded-md">
+                <div class="flex items-center">
+                    <button class="bg-purple-700 hover:bg-purple-800 text-white px-4 py-2 rounded-md">
                         Support Digitization
                     </button>
-                    <button class="md:hidden text-primary" onclick="toggleMobileMenu()">
+                    <button class="md:hidden ml-4">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M4 6h16M4 12h16M4 18h16"></path>
@@ -361,10 +291,10 @@
             <!-- Hero Section -->
             <div class="hero-slider relative">
                 <div class="slide active"
-                    style="background-image: url('https://a.travel-assets.com/findyours-php/viewfinder/images/res70/72000/72969-World-Museum-Liverpool.jpg')">
+                    style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%23805ad5&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;300&quot; fill=&quot;%23b794f4&quot;/><rect x=&quot;300&quot; y=&quot;200&quot; width=&quot;600&quot; height=&quot;400&quot; fill=&quot;%236b46c1&quot;/></svg>');">
                 </div>
                 <div class="slide"
-                    style="background-image: url('https://images.liverpoolmuseums.org.uk/2020-01/World%20Museum%20Banner%20Video%20Compressed%20%281%29_0.mp4')">
+                    style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%234a5568&quot;/><polygon points=&quot;600,100 900,400 600,700 300,400&quot; fill=&quot;%23a0aec0&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;150&quot; fill=&quot;%232d3748&quot;/></svg>');">
                 </div>
                 <div class="slide"
                     style="background-image: url('data:image/svg+xml;utf8,<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1200&quot; height=&quot;800&quot; viewBox=&quot;0 0 1200 800&quot;><rect width=&quot;1200&quot; height=&quot;800&quot; fill=&quot;%23ed8936&quot;/><rect x=&quot;200&quot; y=&quot;200&quot; width=&quot;800&quot; height=&quot;400&quot; fill=&quot;%23dd6b20&quot;/><circle cx=&quot;600&quot; cy=&quot;400&quot; r=&quot;200&quot; fill=&quot;%23f6ad55&quot;/></svg>');">
@@ -372,7 +302,7 @@
 
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="hero-content text-white p-8 rounded-lg max-w-3xl text-center">
-                        <h1 class="text-5xl font-bold mb-4 text-white">Preserving the Past, Powering the Future</h1>
+                        <h1 class="text-5xl font-bold mb-4">Preserving the Past, Powering the Future</h1>
                         <p class="text-xl mb-8">Explore our digitized collection of cultural treasures from around the
                             world</p>
                         <div class="flex flex-wrap justify-center gap-4">
@@ -397,64 +327,58 @@
             </div>
 
             <!-- Value Panels -->
-            <div class="container mx-auto px-4 py-8 md:py-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">The Value of Digital
-                    Preservation</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
-                    <div class="value-card p-6 rounded-lg shadow-md text-center">
-                        <div
-                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-globe text-secondary text-2xl"></i>
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-center mb-12">The Value of Digital Preservation</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-blue-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-globe text-blue-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Global Access</h3>
-                        <p class="text-secondary">Enabling researchers worldwide to study our collection</p>
+                        <h3 class="text-xl font-semibold mb-2">Global Access</h3>
+                        <p class="text-gray-600">Enabling researchers worldwide to study our collection</p>
                     </div>
 
-                    <div class="value-card p-6 rounded-lg shadow-md text-center">
-                        <div
-                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-coins text-secondary text-2xl"></i>
+                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-green-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-coins text-green-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Revenue Opportunities</h3>
-                        <p class="text-secondary">Creating sustainable funding through digital assets</p>
+                        <h3 class="text-xl font-semibold mb-2">Revenue Opportunities</h3>
+                        <p class="text-gray-600">Creating sustainable funding through digital assets</p>
                     </div>
 
-                    <div class="value-card p-6 rounded-lg shadow-md text-center">
-                        <div
-                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-graduation-cap text-secondary text-2xl"></i>
+                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-yellow-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-yellow-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Educational Tools</h3>
-                        <p class="text-secondary">Interactive learning experiences for all ages</p>
+                        <h3 class="text-xl font-semibold mb-2">Educational Tools</h3>
+                        <p class="text-gray-600">Interactive learning experiences for all ages</p>
                     </div>
 
-                    <div class="value-card p-6 rounded-lg shadow-md text-center">
-                        <div
-                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-secondary text-2xl"></i>
+                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Conservation Benefits</h3>
-                        <p class="text-secondary">Preserving fragile artifacts for future generations</p>
+                        <h3 class="text-xl font-semibold mb-2">Conservation Benefits</h3>
+                        <p class="text-gray-600">Preserving fragile artifacts for future generations</p>
                     </div>
 
-                    <div class="value-card p-6 rounded-lg shadow-md text-center">
-                        <div
-                            class="bg-secondary bg-opacity-10 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
-                            <i class="fas fa-hands-helping text-secondary text-2xl"></i>
+                    <div class="value-card bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="bg-purple-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-hands-helping text-purple-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2 text-primary">Cultural Reconnection</h3>
-                        <p class="text-secondary">Reuniting communities with their heritage</p>
+                        <h3 class="text-xl font-semibold mb-2">Cultural Reconnection</h3>
+                        <p class="text-gray-600">Reuniting communities with their heritage</p>
                     </div>
                 </div>
             </div>
 
             <!-- Featured Items -->
-            <div class="bg-light py-8 md:py-16">
+            <div class="bg-gray-100 py-16">
                 <div class="container mx-auto px-4">
-                    <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                        <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-0 text-primary">Featured Digital Artifacts
-                        </h2>
-                        <button class="text-secondary font-semibold flex items-center hover:text-accent"
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-3xl font-bold">Featured Digital Artifacts</h2>
+                        <button class="text-purple-700 font-semibold flex items-center"
                             onclick="showSection('collection-explorer')">
                             View All Collection
                             <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -543,28 +467,28 @@
             </div>
 
             <!-- Stats Section -->
-            <div class="container mx-auto px-4 py-8 md:py-16">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-primary">Digitization Impact
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-secondary mb-2">65%</div>
-                        <p class="text-primary">Collection Digitized</p>
+            <div class="container mx-auto px-4 py-16">
+                <h2 class="text-3xl font-bold text-center mb-12">Digitization Impact</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-purple-700 mb-2">65%</div>
+                        <p class="text-gray-600">Collection Digitized</p>
                     </div>
 
-                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-secondary mb-2">127</div>
-                        <p class="text-primary">Countries Accessing</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-purple-700 mb-2">127</div>
+                        <p class="text-gray-600">Countries Accessing</p>
                     </div>
 
-                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-secondary mb-2">45K+</div>
-                        <p class="text-primary">Educational Downloads</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-purple-700 mb-2">45K+</div>
+                        <p class="text-gray-600">Educational Downloads</p>
                     </div>
 
-                    <div class="bg-light p-6 rounded-lg shadow-md text-center">
-                        <div class="text-4xl font-bold text-secondary mb-2">$1.2M</div>
-                        <p class="text-primary">Revenue Generated</p>
+                    <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                        <div class="text-4xl font-bold text-purple-700 mb-2">$1.2M</div>
+                        <p class="text-gray-600">Revenue Generated</p>
                     </div>
                 </div>
             </div>
